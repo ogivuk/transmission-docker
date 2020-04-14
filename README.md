@@ -36,7 +36,7 @@ If you do not have a config file already, you can download one from:
    * this step is necessary as docker volume mount will lose the default config file in the container.
    * in this way you can later edit and preserve the config file.
    * the provided configuration **is not secure**, and you should consider enabling the rpc authentication and the host whitelist.
-   * `~/Downloads/transmission/config` is a suggested location of the transmission configuration directory on the host, replace with other if desired.
+   * `~/Downloads/transmission/config` is a suggested location of the transmission configuration directory on the host, replace with another if desired.
 
 2. Run a container:
 
@@ -54,9 +54,9 @@ If you do not have a config file already, you can download one from:
    * `--name=transmission` names the container as `transmission`, and it can be replaced with another desired name.
    * `--restart unless-stopped` configures the restart policy to always restart the container if it stops, except when the container is stopped manually.
    * `--publish 9091:9091 --publish 51413:51413 --publish 51413:51413/udp` exposes the required ports.
-   * `~/Downloads/transmission/config` is a suggested location of the transmission configuration directory on the host, replace with other if desired.
-   * `~/Downloads/transmission/torrents` is a suggested location where the downloaded files will be saved on the host, replace with other if desired.
-   * `~/Downloads/transmission/watch` is a suggested location where transmission will watch for torrent files on the host, replace with other if desired.
+   * `~/Downloads/transmission/config` is a suggested location of the transmission configuration directory on the host, replace with another if desired.
+   * `~/Downloads/transmission/torrents` is a suggested location where the downloaded files will be saved on the host, replace with another if desired.
+   * `~/Downloads/transmission/watch` is a suggested location where transmission will watch for torrent files on the host, replace with another if desired.
    * Optionally, also bind mount the directory for incomplete files, if a dedicated one is used.
    * Note that the directories and the downloaded files will be **owned by the default user with UID=1000 and GID=1000**. If that's not desired, start by manually building your own image first (see below).
 
